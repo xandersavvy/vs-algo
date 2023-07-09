@@ -17,7 +17,9 @@ function generateArr() {
 }
 function generateBar() {
     let p = "";
-    arr.map(val => p += `<div class="bar" id="bar-${val}" style="height:${val / 2}px;"></div>`)
+    arr.map(val => {
+        p += `<div class="bar" id="bar-${val}" style="height:${val / 2}px;"></div>`
+    })
     document.getElementsByClassName("canvas")[0].innerHTML = p;
 }
 function sleep() {
@@ -57,8 +59,8 @@ async function bubbleSort() {
 
             }
             // await sleep();
-            await sleep();
         }
+        await sleep();
     }
 
 }
@@ -70,8 +72,8 @@ async function selectionSort() {
         for (j = i + 1; j < n; j++) {
             if (arr[j] < arr[min_idx]) min_idx = j;
             // await sleep();
-            await sleep();
         }
+        await sleep();
         [arr[min_idx], arr[i]] = [arr[i], arr[min_idx]]
     }
 }
@@ -235,4 +237,3 @@ function getDigit(num, pos) {
       await sleep();
     }
   }
-  
