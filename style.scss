@@ -1,0 +1,46 @@
+//mixins
+@mixin flex_center($arg){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $arg;
+}
+@mixin m-p($m,$p){
+    margin: $m;
+    padding: $p;
+}
+//css
+*{
+    box-sizing: border-box;
+}
+body{
+    @include m-p(0, 0);
+    @include flex_center(column);
+    width:100vw;
+    min-height: 100vh;
+    h1{
+        @include m-p(2px,2px );
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 2rem;
+    }
+    .canvas{
+        @include flex_center(row);
+        width:600px;
+        height:404px;
+        @include m-p(5px,2px );
+        overflow: hidden;
+        border: solid black 0.3px;
+        background-color: black;
+        .bar{
+            width: 2px;
+            @include m-p(0.5px,0.5px );
+            background-color: aliceblue;
+        }
+    }
+    @media (max-width: 610px) {
+        display: none;
+    }
+    .btn-grp{
+        @include m-p(2px,2px );
+    }
+}

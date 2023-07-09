@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>
+        Sorting Visualizer
+    </h1>
+    <div class="canvas"></div>
+    <div class="btn-grp">
+        <input type="number" name="size" id="size" class="size" placeholder="Enter array size">
+        <button onclick="generateArr()">Generate Array</button>
+        <select name="sort" id="sort">
+            <option value="0">Bubble</option>
+            <option value="1">Selection</option>
+            <option value="2">Insertion</option>
+            <option value="3">Merge</option>
+            <option value="4">Quick</option>
+            <option value="5">Radix</option>
+        </select>
+        <button class="sortBtn" id="sortbtn" onclick="sort()">
+            Sort
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
